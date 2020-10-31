@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>advert-space</div>
 </template>
 
 <script>
