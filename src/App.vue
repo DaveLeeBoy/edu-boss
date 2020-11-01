@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <h1>测试教育</h1>
     <!-- 根路由出口 -->
     <router-view />
   </div>
 </template>
+<script lang="ts">
+import Vue from "vue";
 
+interface Foo {
+  a: string;
+  b: number;
+}
+export default Vue.extend({});
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.test {
+  color: $danger-color;
 }
 </style>
