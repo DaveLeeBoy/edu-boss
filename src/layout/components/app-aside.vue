@@ -4,8 +4,6 @@
     <el-menu
       :default-active="activeMenu"
       unique-opened
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
@@ -16,15 +14,11 @@
           <i class="el-icon-location"></i>
           <span>权限管理</span>
         </template>
-        <el-menu-item index="/role?active=1">
+        <el-menu-item index="/role">
           <i class="el-icon-setting"></i>
           <span slot="title">角色管理</span>
         </el-menu-item>
-        <el-menu-item index="/role?active=2">
-          <i class="el-icon-setting"></i>
-          <span slot="title">菜单管理2</span>
-        </el-menu-item>
-        <el-menu-item index="/menu?active=2">
+        <el-menu-item index="/menu">
           <i class="el-icon-setting"></i>
           <span slot="title">菜单管理</span>
         </el-menu-item>

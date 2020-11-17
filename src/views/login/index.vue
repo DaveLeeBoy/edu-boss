@@ -8,10 +8,10 @@
       label-position="top"
     >
       <el-form-item label="手机号" prop="phone">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.phone"></el-input>
       </el-form-item>
       <el-form-item label="密码" prop="password">
-        <el-input v-model="form.name"></el-input>
+        <el-input v-model="form.password"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button class="login-btn" type="primary" @click="onSubmit"
@@ -37,7 +37,7 @@ export default Vue.extend({
   },
   methods: {
     onSubmit() {
-      console.log("asd");
+      console.log(this.form);
     }
   }
 });
@@ -53,6 +53,7 @@ export default Vue.extend({
     background: #fff;
     padding: 30px;
     border-radius: 6px;
+    width: 400px;
   }
   .login-btn {
     width: 100%;
