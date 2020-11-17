@@ -1,7 +1,9 @@
 <template>
   <div class="aside">
+    <!-- default-active="4" -->
     <el-menu
-      default-active="4"
+      :default-active="activeMenu"
+      unique-opened
       @open="handleOpen"
       @close="handleClose"
       background-color="#545c64"
@@ -14,11 +16,15 @@
           <i class="el-icon-location"></i>
           <span>权限管理</span>
         </template>
-        <el-menu-item index="/role">
+        <el-menu-item index="/role?active=1">
           <i class="el-icon-setting"></i>
           <span slot="title">角色管理</span>
         </el-menu-item>
-        <el-menu-item index="/menu">
+        <el-menu-item index="/role?active=2">
+          <i class="el-icon-setting"></i>
+          <span slot="title">菜单管理2</span>
+        </el-menu-item>
+        <el-menu-item index="/menu?active=2">
           <i class="el-icon-setting"></i>
           <span slot="title">菜单管理</span>
         </el-menu-item>
@@ -58,6 +64,17 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "AppAside",
+  computed: {
+    activeMenu() {
+      const { meta, path, fullPath } = this.$route;
+      // if set path, the sidebar will highlight the path you set
+      if (meta.activeMenu) {
+        return meta.activeMenu;
+      }
+      console.log(new Date().getTime(), "path", path);
+      return fullPath;
+    }
+  },
   methods: {
     handleOpen(key: string, keyPath: string): void {
       console.log(key, keyPath);
