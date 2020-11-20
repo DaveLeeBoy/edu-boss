@@ -75,9 +75,7 @@ export default Vue.extend({
         } else {
           this.$store.commit("setUser", data.content);
           this.$message.success("请求成功");
-          this.$router.push({
-            name: "home"
-          });
+          this.$router.push((this.$route.query.redirect as string) || "/");
         }
       } catch (error) {
         this.$message.error("接口出错了");
