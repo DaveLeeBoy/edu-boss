@@ -65,7 +65,6 @@ export default Vue.extend({
       if (meta.activeMenu) {
         return meta.activeMenu;
       }
-      console.log(new Date().getTime(), "path", path);
       return fullPath;
     }
   },
