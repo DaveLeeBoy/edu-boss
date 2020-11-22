@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <ResourceList></ResourceList>
+  <div class="menu-wrap">
+    <createOrEdit :is-edit="true"></createOrEdit>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-import ResourceList from "./components/List";
+import createOrEdit from "./components/createOrEdit";
 export default Vue.extend({
   components: {
-    ResourceList
+    createOrEdit
   }
 });
 </script>
-
+å
 <style lang="scss" scoped></style>
